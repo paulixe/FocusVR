@@ -66,6 +66,6 @@ public class BallBehaviour : MonoBehaviour
     }
 
     [ContextMenu("Test")]
-    public void TEst()=>IsActivated = !IsActivated;
+    public void Test()=>IsActivated = !IsActivated;
 
 }
