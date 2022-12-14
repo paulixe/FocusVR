@@ -7,7 +7,7 @@ SteamVR*
 !Assets/StreamingAssets/SteamVR/
 !   
 
-Assets/ShaderGraph*
+#Assets/ShaderGraph*
 #
 /[Ll]ibrary/
 /[Tt]emp/
