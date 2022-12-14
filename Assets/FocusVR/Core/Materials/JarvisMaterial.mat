@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: JarvisMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 640cc09898fc2ec45a4c7b546452c862, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 793f334d196d3e54eb28b833335afbca, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
@@ -34,11 +34,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Intensity: 0.08
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    m_Colors:
+    - _Color: {r: 0.18347585, g: 0.18039213, b: 0.8392157, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &3881466756135773591
+--- !u!114 &400667591357024539
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
