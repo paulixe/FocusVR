@@ -2,26 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Valve.VR;
 [RequireComponent(typeof(AudioSource))]
-public class BallBehaviour : MonoBehaviour
+public class BallBehaviour : MonoBehaviour, IInteractable
 {
     [SerializeField] Material ActivatedMat;
     [SerializeField] Material DeactivatedMat;
+
     private Renderer ballRenderer;
     private AudioSource ballAudioSource;
     private bool isActivated;
    
-    public event Action OnActivation = delegate { };
-    public event Action OnDeactivation = delegate { };
     public bool IsActivated {
         get=> isActivated;
         set
         {
             if (value)
-                OnActivation();
+                Activate();
             else
-                OnDeactivation();
+                Deactivate();
         }
+    }
+    public void TriggerWith(SteamVR_Input_Sources source)
+    {
+        if (IsActivated)
+        {
+            Player.Instance.PlayQuickVibration(0,source);
+            IsActivated = false;
+        }
+
     }
     //called before start
     void Awake()
@@ -49,23 +58,4 @@ public class BallBehaviour : MonoBehaviour
         ballRenderer.material = DeactivatedMat;
         ballAudioSource.Play();
     }
-    private void OnEnable()
-    {
-        OnActivation += Activate;
-        OnDeactivation += Deactivate;
-    }
-    private void OnDisable()
-    {
-        OnActivation -= Activate;
-        OnDeactivation -= Deactivate;
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (IsActivated)
-            IsActivated=false;
-    }
-
-    [ContextMenu("Test")]
-    public void Test()=>IsActivated = !IsActivated;
-
 }
