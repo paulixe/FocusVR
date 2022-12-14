@@ -204,6 +204,12 @@
         "com.unity.xr.legacyinputhelpers": "2.1.4"
       }
     },
+    "paulchaumont.tools": {
+      "version": "file:C:/Program Files/Unity/MyPackages/Tools",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
