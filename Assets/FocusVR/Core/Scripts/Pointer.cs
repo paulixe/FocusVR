@@ -9,7 +9,6 @@ namespace VR
     {
         [SerializeField] Transform m_camera;
         [SerializeField] GameObject m_Dot;
-        [SerializeField] VRInputModule m_InputModule;
         [SerializeField] float dotAngle = 1f;
 
         LineRenderer lineRenderer = null;
@@ -27,7 +26,7 @@ namespace VR
 
         private void Updateline()
         {
-            PointerEventData data = m_InputModule.GetData();
+            PointerEventData data = VRInputModule.instance.GetData();
 
             Vector3 endPosition=Vector3.zero;
             bool isUIHit = data.pointerCurrentRaycast.distance != 0;

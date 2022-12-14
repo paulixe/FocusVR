@@ -7,7 +7,6 @@ namespace VR
     public class VRInputModule : InputSystemUIInputModule
     {
         public static VRInputModule instance;
-        public Camera m_camera;
         public SteamVR_Input_Sources m_TargetSource;
         public SteamVR_Action_Boolean m_ClickAction;
 

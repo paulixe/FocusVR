@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FocusVR/Scenes/Wall360.unity
     guid: c419d3d1c5506c64b94e2a11554b5ea4
+  - enabled: 1
+    path: Assets/FocusVR/Scenes/Relaxation.unity
+    guid: 3eab8ed106b3a6144ae9966f38ab227a
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 22194c5a340960e4a98ef913f9a90f99, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 19c1c002e5d2c26439388db819a6694d, type: 2}
